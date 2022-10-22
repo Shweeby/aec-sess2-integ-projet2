@@ -1,0 +1,74 @@
+<%- include('./partials/menu') %>
+
+    <nav aria-labelledby="fil-ariane" role="navigation">
+        <h2 id="fil-ariane">Fil d'ariane</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="/creation">Créer un personnage</a></li>
+            <li class="breadcrumb-item"><a href="/personnages">Personnages créés</a></li>
+            <li class="breadcrumb-item active text-light" aria-current="page">Personnages créés</li>
+        </ol>
+    </nav>
+    <div class="alert alert-primary mt-3" role="alert">
+        Ceci est le personnage par défaut!<br>Vous pouvez vous en créer un sur mesure!
+    </div>
+    <div class="row" id="contenuPrincipal">
+
+        <h3>Personnage créé<br>par défaut</h3>
+        <div class="row">
+            <div class="col-lg-8">
+                <table class="table table-hover table-dark table-striped">
+                    <colgroup>
+                        <col>
+                        <col span="2">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">Caractéristiques</th>
+                            <th class="text-center" scope="col" colspan="2">Données et statistiques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Nom :</th>
+                            <td>Son Goku</td>
+                            <td>(Kakarot)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Race :</th>
+                            <td>Saiyan</td>
+                            <td> Planete Vegeta</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Capacité unique :</th>
+                            <td>10%</td>
+                            <td>plus de dégat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Attaque :</th>
+                            <td>5</td>
+                            <td>/10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Défence :</th>
+                            <td>5</td>
+                            <td>/10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Santé :</th>
+                            <td>5</td>
+                            <td>/10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Vitesse :</th>
+                            <td>5</td>
+                            <td>/10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <img class="m-3" src="images/goku.png" alt="Son Goku">
+            </div>
+        </div>
+    </div>

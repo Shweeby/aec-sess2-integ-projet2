@@ -1,0 +1,275 @@
+$primary: #EC8E10;
+$secondary: #1F1E28;
+$dark: #201F2A;
+$body-bg: #463A44;
+$white: #FFFFFF;
+$body-color: $white;
+$form-range-thumb-active-bg: $primary;
+$form-range-thumb-bg: $primary;
+$form-check-input-checked-bg-color: $primary;
+$text-color: $white;
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: $white;
+$navbar-dark-color: $primary;
+$navbar-dark-hover-color: $white;
+$font-family-sans-serif: abel, helvetica, arial, sans-serif;
+$headings-font-family: abel, helvetica, arial, sans-serif;
+$headings-color: $primary;
+$input-bg: $white;
+$input-color: $secondary;
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+body {
+  background: url(./images/fond.jpg) $body-bg no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.row {
+  @extend .mx-0;
+}
+
+h3 {
+  font-size: 3em;
+  @extend .text-uppercase;
+  padding: 2rem 0 1rem;
+
+  &::first-line {
+    @extend .text-white;
+  }
+}
+
+a {
+  @extend .text-primary;
+
+  &:hover {
+    @extend .text-white;
+  }
+}
+
+.card {
+  p {
+    @extend .text-secondary;
+  }
+
+  .card-title {
+    font-size: 3rem;
+
+    a {
+      @extend .stretched-link;
+      @extend .text-white;
+      text-shadow: 1px 1px 6px rgba($secondary, 1);
+    }
+  }
+}
+
+.element-invisible,
+h2 {
+  @extend .visually-hidden;
+}
+
+$button-color: $primary;
+$transition-time: 750ms;
+
+.nav-principal {
+  .button {
+    position: relative;
+    display: inline-flex;
+    @extend .text-white;
+    background-color: lighten($button-color, 10%);
+    padding-left: 1rem;
+    overflow: hidden;
+    z-index: 1;
+    align-items: center;
+    margin: 0.2rem 0.7rem 0.2rem 1.5rem;
+    line-height: 1em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: scaleX(0);
+      transform-origin: 0 100%;
+      width: 100%;
+      height: 100%;
+      background-color: $button-color;
+      z-index: -1;
+      transition: transform $transition-time;
+    }
+
+    span {
+      &:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.2rem;
+        padding: 1rem;
+        overflow: hidden;
+        background-color: $button-color;
+        width: 2.9rem;
+      }
+
+      &:first-child {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    svg {
+      max-width: 20px;
+      width: 100%;
+      height: auto;
+      max-height: 18px;
+      fill: $white;
+    }
+
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+      }
+
+      svg {
+        animation: moveArrow $transition-time;
+      }
+    }
+  }
+
+  .active {
+    @extend .bg-primary;
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0px);
+  }
+
+  49% {
+    transform: translateX(50px);
+  }
+
+  50% {
+    transform: translateX(-50px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+i {
+  font-size: 1rem;
+  @extend .text-primary;
+}
+
+.form-text {
+  color: rgba($white, 0.6);
+}
+
+.animate {
+  animation: slide-in 1.7s both;
+  animation-delay: 500ms;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(1500px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animation {
+  @extend .animate;
+  @extend .justify-content-evenly;
+}
+
+.carrousel {
+  @extend .mx-auto;
+  @extend .d-block;
+}
+
+.quote-card {
+  background: $body-bg;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba($secondary, 0.12);
+  position: relative;
+  overflow: hidden;
+
+  p {
+    @extend .text-white;
+    line-height: 1.5;
+    max-width: 80%;
+  }
+
+  &:before {
+    font-family: Georgia, serif;
+    content: "“";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 5em;
+    color: rgba($primary, 0.6);
+  }
+}
+
+.form-check-input {
+  min-width: 1rem;
+}
+
+.modal-body {
+  a {
+    @extend .text-primary;
+    text-decoration: underline;
+
+    &:hover {
+      color: rgba($primary, 0.7);
+    }
+  }
+}
+
+.image-decoration {
+  position: absolute;
+  z-index: 10;
+  height: auto;
+
+}
+
+.logo,
+.logo-petit {
+  left: 5px;
+  top: -33px;
+  height: 108px;
+  width: auto;
+}
+
+.logo-petit {
+  display: none;
+}
+
+.boules-dragon {
+  right: 5px;
+  top: 10px;
+  width: 169px;
+}
+
+@media (max-width: 480px) {
+
+  .boules-dragon,
+  .logo {
+    display: none;
+  }
+
+  .logo-petit {
+    display: block;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Dragon Ball est un site Web dédié au manga eponyme, mettant en vedette Goku, Vegeta, Piccolo et bien d'autres encore" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="code.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>TP2-Intégration</title>
+</head>
+
+<body class="px-4 py-5">
+
+    <a href="#contenuPrincipal"
+        class="visually-hidden-focusable fixed-top bg-danger w-25 text-center text-light p-2 m-4">Accéder au contenu
+        principal</a>
+    <div class="container-fluid p-0">
+        <header class="row" role="banner">
+            <nav class="navbar nav-secondaire navbar-expand-md navbar-dark bg-dark col p-3" role="navigation">
+                <h2 id="menu-secondaire">Menu principal</h2>
+                <h1>
+                    <a href="/">
+                        <img src="images/logo-petit.png" alt="" class="logo-petit image-decoration" width="137"
+                            height="207">
+                        <img src="images/logo.png" alt="" class="logo image-decoration" width="518" height="207">
+                        <span class="element-invisible">Dragon Ball</span>
+                    </a>
+                </h1>
+                <div>
+                    <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="déplier le menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse col-sm-8 justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav pe-3 pb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Partager</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Connexion</a>
+                        </li>
+                    </ul>
+                    <form class="input-group pe-3 w-25">
+                        <input class="form-control" type="search" placeholder="Chercher" aria-label="mot-clés" />
+                        <button id="loupe" class="btn btn-primary text-white fw-bold" type="button" data-toggle="modal"
+                            data-target="#faireRecherche" aria-label="lancer la recherche">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                </path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <div class="modal fade" id="fenetreRecherche" tabindex="-1" role="dialog" aria-labelledby="resultatsRecherche"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resultatsRecherche">Résultats de recherche</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="fermer">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <a href="#" class="lien"
+                                    title="Présentation de Dragon Fighter Z lors du E3 2017">Présentation de Dragon
+                                    Fighter Z lors du E3 2017</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Guide complet du jeu">Guide complet du jeu</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Rejoindre la communauté">Rejoindre la communauté</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Site officiel de Dragon Ball">Site officiel de Dragon Ball</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="fermer" type="button" class="btn btn-primary text-light" data-dismiss="modal">
+                            Fermer
+                        </button>
+                        <button id="sauvegarder" type="button" class="btn btn-primary text-light">
+                            Sauvegarder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

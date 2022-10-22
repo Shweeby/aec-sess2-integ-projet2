@@ -1,0 +1,39 @@
+<main class="row bg-dark bg-opacity-75 py-4" role="main">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs>
+            <symbol id="arrow" viewBox="0 0 100 100">
+                <path d="M12.5 45.83h64.58v8.33H12.5z" />
+                <path d="M59.17 77.92l-5.84-5.84L75.43 50l-22.1-22.08 5.84-5.84L87.07 50z" />
+            </symbol>
+        </defs>
+    </svg>
+    <nav class="nav nav-principal flex-column col-md-3 pb-4" aria-labelledby="menu-principal" role="navigation">
+        <h2 id="menu-principal">Menu principal</h2>
+
+        <a href="/" class="button" id="accueil">
+            <span>Accueil</span>
+            <span><svg>
+                    <use xlink:href="#arrow" href="#arrow"></use>
+                </svg></span>
+        </a>
+        <a href="/creation" class="button" id="creation">
+            <span>Créer un personnage</span>
+            <span><svg>
+                    <use xlink:href="#arrow" href="#arrow"></use>
+                </svg></span>
+        </a>
+        <a href="/personnages" class="button" id="personnages">
+            <span>Personnages créés</span>
+            <span><svg>
+                    <use xlink:href="#arrow" href="#arrow"></use>
+                </svg></span>
+        </a>
+        <a href="/defaut" class="button" id="defaut">
+            <span>Par défaut</span>
+            <span><svg>
+                    <use xlink:href="#arrow" href="#arrow"></use>
+                </svg></span>
+        </a>
+    </nav>
+    <div class="col-md-9">
+        <div class="row">

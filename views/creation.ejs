@@ -1,0 +1,162 @@
+<%- include('./partials/menu') %>
+
+    <nav aria-labelledby="fil-ariane" role="navigation">
+        <h2 id="fil-ariane">Fil d'ariane</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+            <li class="breadcrumb-item active text-light" aria-current="page">Créer un personnage</li>
+        </ol>
+    </nav>
+    <div class="row" id="contenuPrincipal">
+        <h3>Créer<br>un personnage</h3>
+        <form action="https://philippefleury.com/backend.php" method="post" class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <input class="form-check-input" type="radio" name="personnageRadio" id="personnageRadio1"
+                            aria-label="Son Goku" checked>
+                        <label for="personnageRadio1">
+                            <figure class="figure">
+                                <img class="my-2" src="images/goku.png" alt="Son Goku">
+                                <figcaption class="figure-caption text-white text-center">He he he!</figcaption>
+                            </figure>
+                        </label>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <input class="form-check-input" type="radio" name="personnageRadio" id="personnageRadio2"
+                            aria-label="Vegeta">
+                        <label for="personnageRadio2">
+                            <figure class="figure">
+                                <img class="my-2" src="images/vegeta.png" alt="Vegeta">
+                                <figcaption class="figure-caption text-white text-center">I will beat you!</figcaption>
+                            </figure>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <input class="form-check-input" type="radio" name="personnageRadio" id="personnageRadio3"
+                            aria-label="Broly">
+                        <label for="personnageRadio3">
+                            <figure class="figure">
+                                <img class="my-2" src="images/broly.png" alt="Broly">
+                                <figcaption class="figure-caption text-white text-center">ARGGGHHHHHHHHHH!!!
+                                </figcaption>
+                            </figure>
+                        </label>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <input class="form-check-input" type="radio" name="personnageRadio" id="personnageRadio4"
+                            aria-label="kid buu">
+                        <label for="personnageRadio4">
+                            <figure class="figure">
+                                <img class="my-2" src="images/kidBuu.png" alt="Kid Buu">
+                                <figcaption class="figure-caption text-white text-center">Buu squash!</figcaption>
+                            </figure>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <input class="form-check-input" type="radio" name="personnageRadio" id="personnageRadio5"
+                            aria-label="freeza">
+                        <label for="personnageRadio5">
+                            <figure class="figure">
+                                <img class="my-2" src="images/freeza.png" alt="Freeza">
+                                <figcaption class="figure-caption text-white text-center">I will get you Saiyans!
+                                </figcaption>
+                            </figure>
+                        </label>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <input class="form-check-input" type="radio" name="personnageRadio" id="personnageRadio6"
+                            aria-label="cell">
+                        <label for="personnageRadio6">
+                            <figure class="figure">
+                                <img class="my-2" src="images/cell.png" alt="Cell">
+                                <figcaption class="figure-caption text-white text-center">Humpffff!</figcaption>
+                            </figure>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h4 class="my-3">Création du personnage</h4>
+                <div class="mb-3">
+                    <label for="nomPersonnage" class="form-label">Nom du personnage :</label>
+                    <textarea cols="12" rows="1" class="form-control" id="nomPersonnage"></textarea>
+                    <div class="form-text text-white">Le nom du personnage ne peut pas contenir de caractères spéciaux.
+                    </div>
+                </div>
+                <p>Race du personnage :</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="classePersonnage" id="classePersonnage1" checked
+                        aria-label="saiyan">
+                    <label class="form-check-label" for="classePersonnage1">
+                        Saiyan
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="classePersonnage" id="classePersonnage2"
+                        aria-label="namek">
+                    <label class="form-check-label" for="classePersonnage2">
+                        Namek
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="classePersonnage" id="classePersonnage3"
+                        aria-label="ange">
+                    <label class="form-check-label" for="classePersonnage3">
+                        Ange
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="classePersonnage" id="classePersonnage4"
+                        aria-label="android">
+                    <label class="form-check-label" for="classePersonnage4">
+                        Android
+                    </label>
+                </div>
+                <label class="my-3" for="couleurVetement">Choisir une couleur de vêtement :</label>
+                <br>
+                <input type="color" aria-label="choisir une couleur" id="couleurVetement">
+                <h4 class="my-3">Caractéristiques du personnage</h4>
+                <div class="mb-3">
+                    <label for="ajouterObjet" class="form-label">Ajouter un objet :</label>
+                    <input class="form-control" type="file" id="ajouterObjet">
+                </div>
+                <label for="capaciteUnique" class="form-label">Capacité unique :</label>
+                <select class="form-select mb-3" aria-label="Capacité unique" id="capaciteUnique">
+                    <option value="1" selected>10% plus de dégat</option>
+                    <option value="2">10% plus de défense</option>
+                    <option value="3">10% plus d'xp</option>
+                    <option value="4">10% plus d'or</option>
+                </select>
+                <label for="attaque" class="form-label">Attaque :</label>
+                <label id="attaque" for="points" class="form-label"></label>
+                <input aria-label="range input 1" id="range1" type="range" class="form-range color-success" min="0"
+                    max="10">
+                <label for="défense" class="form-label">Défense :</label>
+                <label id="defense" for="points" class="form-label"></label>
+                <input aria-label="range input 2" id="range2" type="range" class="form-range" min="0" max="10">
+                <label for="santé" class="form-label">Santé :</label>
+                <label id="sante" for="points" class="form-label"></label>
+                <input aria-label="range input 3" id="range3" type="range" class="form-range" min="0" max="10">
+                <label for="vitesse" class="form-label">Vitesse :</label>
+                <label id="vitesse" for="points" class="form-label"></label>
+                <input aria-label="range input 4" id="range4" type="range" class="form-range" min="0" max="10">
+                <button type="submit" class="btn btn-primary my-5 text-light" aria-label="Envoyer">Envoyer</button>
+                <button id="reset" type="reset" class="btn btn-primary text-light" aria-label="Annuler">Annuler</button>
+                <button id="aleatoire" type="button" class="btn btn-light text-secondary" aria-label="Aléatoire">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-dice-5" viewBox="0 0 16 16">
+                        <path
+                            d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z" />
+                        <path
+                            d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm4-4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                    </svg>
+                    Aléatoire
+                </button>
+            </div>
+        </form>
+    </div>
